@@ -5,7 +5,7 @@
         'Home' => 'index.php',
         'About' => 'about.php',
         'Contact' => 'contact.php',
-        'Register' => '',
+        'Register' => 'register.php',
         'Login' => '',
         'Logout' => '',
     ];
@@ -21,10 +21,30 @@
     <title>Oh Baby</title>
 </head>
 <body class="bg-gray-100">
-    <nav class="p-10 bg-white flex justify-between">
-        <?php
+    <nav class="p-10 bg-white flex justify-between mb-6">
+        {{-- php
             echo displayNavigation($headerMenu) 
-        ?>
+        ?> --}}
+        <ul class="flex items-center">
+            <li>
+                <a href="/" class="p-3">Home</a>
+            </li>
+            <li>
+                <a href="" class="p-3">About</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Contact</a>
+            </li>
+            <li>
+                <a href="{{ route('register') }}" class="p-3">Register</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Login</a>
+            </li>
+            <li>
+                <a href="" class="p-3">Logout</a>
+            </li>
+        </ul>
 
         <!--Logo-->
 
@@ -51,7 +71,7 @@
     </nav>
     @yield('content')
 </body>
-<footer class="bg-black text-white p-10">
+<footer class="bg-black text-white p-10 mt-6">
     <div class="flex justify-between">
         <p>Copyright © Oh Baby, All rights reserved 2021</p>
         <div class="flex justify-between"> 
