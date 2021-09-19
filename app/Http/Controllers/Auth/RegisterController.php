@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
+    // to make sure user is not able to re-register
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
     public function index()
     {
         return view('auth.register');
@@ -30,8 +35,8 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
         // sign-in user
-        auth()->attempt();
+        auth()->attempt($request->only('email', 'password'));
         // redirect
-        return redirect()->route('/');
+        return redirect()->route('home');
     }
 }

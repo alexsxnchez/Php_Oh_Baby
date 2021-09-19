@@ -1,0 +1,31 @@
+/*Set Variables*/
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Courgette&family=Lateef&display=swap');
+:root {
+    /*Primary-colors*/
+    --Melon: #FFA69E;
+    --Eggshell: #FAF3DD;
+    --Aero-blue: #B8F2E6;
+    --Powder-blue: #AED9E0;
+    --Black-coral: #5E6472;
+    /*Set-body-colors*/
+    --primary-color: #FFF;
+    --secondary-color: #000;
+    --header-color: var(--primary-color);
+    --header-words: var(--primary-color);
+    --footer-color: var(--secondary-color);
+    --footer-words: var(--primary-color);
+    /*Set-body-fonts*/
+    --primary-font: 'Courgette', cursive;
+    --secondary-font: 'Arapey', serif;
+    --last-font: 'Lateef', cursive;
+}
+.section {
+    height: 85vh;
+    border-top: solid 5px var(--Powder-blue);
+    border-bottom: solid 5px var(--Melon);
+}
+.about__img img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
